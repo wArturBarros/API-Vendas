@@ -1,5 +1,4 @@
 import { Request, Response } from 'express';
-import { request } from 'http';
 import CreateProductService from '../services/CreateProductService';
 import DeleteProductService from '../services/DeleteProductService';
 import ListProductService from '../services/ListProductService';
@@ -7,7 +6,7 @@ import ShowProductService from '../services/ShowProductService';
 import UpdateProductService from '../services/UpdateProductService';
 
 export default class ProductsController {
-  public async index(resquest: Request, response: Response): Promise<Response> {
+  public async index(request: Request, response: Response): Promise<Response> {
     const listProducts = new ListProductService();
 
     const products = await listProducts.execute();
