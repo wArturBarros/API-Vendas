@@ -17,6 +17,7 @@ class UsersRepository extends Repository<User> {
         id,
       },
     });
+
     return user;
   }
   public async findByEmail(email: string): Promise<User | undefined> {
